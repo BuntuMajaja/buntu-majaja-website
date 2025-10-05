@@ -1,0 +1,134 @@
+# Project/Portfolio Card Template (Final Version)
+
+Each card should have a consistent structure whether it represents a **completed project**, an **ongoing venture**, an **advisory role**, or a **coming-soon initiative**. This standardisation makes the section feel cohesive and professional.
+
+---
+
+## Card Face (Preview in Grid)
+
+Displayed at a glance:
+
+1. **Project Title** – short, recognisable name.
+2. **Role / Position** – e.g. *CEO / Ecosystem Lead*.
+3. **Years** – start–end or “Present.”
+4. **Meta Tag (Stage)** – one of:
+
+   * Completed / Case Study
+   * Ongoing / Active
+   * Advisory / Board
+   * Coming Soon
+5. **One-liner Outcome** – quantifiable if possible (“Raised \$20M+ for startups”).
+6. **Thumbnail** – logo, screenshot, or placeholder.
+7. **Secondary Tags** – Innovation, Ecosystem, AI, Real Estate, Strategy, etc.
+8. **CTA Button** – “View Details.”
+
+---
+
+## Card Inner (Detail / Modal View)
+
+Deeper breakdown when expanded:
+
+1. **Header**
+
+   * Project Title
+   * Role / Position
+   * Years
+   * Meta Tag (Stage badge)
+
+2. **Context**
+
+   * 2–4 sentences: what the project is, why it matters, big picture.
+
+3. **Actions / Involvement**
+
+   * Bullet list of *what you personally did*.
+   * Show operational vs strategic contributions clearly.
+
+4. **Results & Impact**
+
+   * **Completed / Ongoing:** measurable outcomes (funding raised, ROI, reach, partnerships, influence).
+   * **Advisory:** highlight influence (policy inputs, governance, board outcomes).
+   * **Coming Soon:** outline goals, milestones, expected results.
+
+5. **Learning & Reflection**
+
+   * **Completed / Case Study:** retrospective learnings — what worked, what didn’t, lessons carried forward.
+   * **Ongoing / Active:** real-time pivots — what’s being adjusted and early insights emerging.
+   * **Advisory / Board:** either *so far I’ve learned* (if seasoned) or *anticipating/observing X* (if early).
+   * **Coming Soon:** pre-mortem style — key risks or considerations being factored into design.
+   * Always keep tone balanced: authentic but constructive.
+
+6. **Leverage / Networks**
+
+   * Partners, ecosystems, collaborators, or systems you worked through.
+   * Demonstrates reach and credibility.
+
+7. **Next Steps / Get Involved**
+
+   * **Completed:** default CTA (e.g., *“Hire me for consulting in XYZ”*).
+   * **Ongoing:** invitations to collaborate, invest, support.
+   * **Advisory:** note if you’re open to similar roles.
+   * **Coming Soon:** clear open call (partners, investors, feedback, etc.).
+
+8. **Tags**
+
+   * Secondary thematic tags (Innovation, AI, Real Estate, Strategy).
+
+---
+
+## Primary Meta Tag Definitions
+
+* **Completed / Case Study** = Finished initiatives with measurable outcomes and proof of capability.
+* **Ongoing / Active** = Current operational projects being executed.
+* **Advisory / Board** = Governance and strategic roles (non-operational).
+* **Coming Soon** = Pipeline initiatives, early-stage or exploratory.
+
+---
+
+## Secondary Tags (Working List)
+
+To ensure coverage across both **FSDD future domains** and **concrete credibility from past work**, use these as a flexible tag bank:
+
+* Innovation
+* Ecosystem
+* Partnerships
+* Business Development
+* Events
+* Conferencing
+* Acceleration
+* Startups
+* Mentorship
+* Virtual
+* Investment
+* Platform
+* International
+* SaaS
+* Strategy
+* Mining
+* Consulting
+* CleanTech
+* Blockchain
+* Policy
+* Real Estate
+* AI / AI Ops
+* AI Agents
+* Forecasting & Futures
+* Cloud Computing
+* MicroSaaS
+* Finance
+* Economic Sovereignty
+* Geopolitics
+* Food & Culture
+* Marketing & Analytics
+* Learning & Reports
+
+---
+
+## Notes
+
+* Every card should showcase **personal involvement** to underline credibility.
+* Meta tags are MECE: Past (Completed), Present operational (Ongoing), Present strategic (Advisory), Future (Coming Soon).
+* Secondary tags cluster projects by domain and help surface both current credibility and future direction.
+* **Leverage / Networks** and **Learning & Reflection** deepen authenticity.
+* **Next Steps / Get Involved** adapts by stage.
+* Keep tone factual but invitational — transparency without overcommitting liability.

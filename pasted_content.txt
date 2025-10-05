@@ -1,0 +1,258 @@
+Goal:
+Build a personal “media-universe” hub inspired by the information architecture of profgmedia.com (content channels on homepage), but for Buntu Majaja. This is a lean MVP with three primary channels: About, Portfolio, Newsletter (+ footer link to a book on Gumroad). Prioritize clean code, performance, accessibility, and modern aesthetics.
+
+Tech Stack (opinionated):
+
+Framework: Next.js 14 (App Router)
+
+Styling: Tailwind CSS
+
+UI kit: shadcn/ui (Radix primitives)
+
+Animations: Framer Motion
+
+Icons: lucide-react
+
+Content: MDX via Contentlayer (no external CMS yet)
+
+Analytics: Plausible
+
+SEO: sitemap.xml, robots.txt, Open Graph images via /api/og
+
+Deploy target: Vercel
+
+TypeScript everywhere, ESLint + Prettier configured
+
+Routes & Pages:
+
+/ (Home)
+
+Purpose: “Universe” landing that routes into channels.
+
+Sections (in order):
+
+Hero with headline + short subcopy.
+
+Channel tiles (3 cards with motion): About, Portfolio, Newsletter.
+
+Featured teasers:
+
+2 latest Portfolio items (from MDX)
+
+2 latest Newsletter posts (just placeholders/links for now)
+
+Footer: socials, small print, and “Read my book” (Gumroad link).
+
+/about
+
+Long-form MDX page with 3 blocks: Mission, Credibility (highlights), Now/Next.
+
+CTA row: Download CV (link to /public/cv.pdf), Email mailto, LinkedIn.
+
+/portfolio
+
+Grid of MDX case studies with filter chips (tags).
+
+Clicking a card opens /portfolio/[slug] (MDX detail page).
+
+/newsletter
+
+Simple pitch + embed form placeholder for Beehiiv/Substack.
+
+Room for 3 “highlighted posts” (static placeholders).
+
+Components (shadcn/ui + custom):
+
+Navbar (sticky, minimal, links: Home, About, Portfolio, Newsletter)
+
+Footer (social icons + Gumroad button)
+
+ChannelCard (hover motion, subtle glow, arrow)
+
+Section wrapper (max-width, spacing)
+
+Tag chips for portfolio filters
+
+Marquee (optional, simple CSS) for partner/logo strip (placeholder)
+
+NowBadge (small pill for “Now/Active” items)
+
+Contentlayer / MDX Model:
+
+Projects (/content/projects/*.mdx)
+
+title: string
+
+slug: string
+
+summary: string (<=160 chars)
+
+role: string (e.g., “Ecosystem Lead”, “Strategist”)
+
+outcome: string (quant or qualitative results)
+
+date: string (YYYY-MM-DD)
+
+tags: string[] (e.g., ["Innovation","Investment","Property","Tech"])
+
+thumbnail: string (path under /public/portfolio/)
+
+MDX body supports headings, lists, images, callouts.
+
+Posts (/content/posts/*.mdx) — create folder + example file for future use (not linked yet).
+
+Home Page Copy (placeholder):
+
+Hero H1: “Buntu Majaja — Ecosystem Builder • Strategist • Investor”
+
+Subcopy (one line): “I design and scale innovation systems that convert vision into ventures across Africa.”
+
+Channel tiles:
+
+About → “The story, values, and what I’m building next.”
+
+Portfolio → “Case studies: role, actions, outcomes.”
+
+Newsletter → “FutureSight Africa — weekly notes on innovation & capital.”
+
+Design Language (edgy, restrained):
+
+Dark first. Background #0B0B0C (near-black), foreground #EDEDED.
+
+Single accent: electric cyan (#00E5FF) for highlights/focus rings.
+
+Typography: Headings Clash Display or Satoshi (fallback Inter/Geist). Body: Inter or Geist.
+
+Big negative space, 12-column grid, elegant card shadows (very soft), 2xl radii.
+
+Motion: fade+translateY(8px) on section reveal; cards scale to 1.02 on hover; staggered children (70–120ms).
+
+Focus-visible styles, WCAG AA contrast, prefers-reduced-motion respected.
+
+Performance & SEO:
+
+Use next/image for thumbnails.
+
+Preload heading font.
+
+Metadata per route; canonical tags.
+
+/api/og endpoint to generate dynamic OG images from title + tags.
+
+Add sitemap.xml and robots.txt.
+
+Footer:
+
+Left: © {currentYear} Buntu Majaja Inc.
+
+Right: icon links (LinkedIn, X/Twitter, GitHub, YouTube) + Button: “Read my Book” → placeholder Gumroad URL.
+
+Hidden links ready for future: /speaking, /media, /video, /store (don’t expose in nav yet).
+
+Files & Structure (starter):
+
+/app
+  /(site)/layout.tsx
+  /(site)/page.tsx              # Home
+  /about/page.tsx
+  /portfolio/page.tsx
+  /portfolio/[slug]/page.tsx
+  /newsletter/page.tsx
+  /api/og/route.ts
+/components
+  /ui/*                         # shadcn components
+  navbar.tsx
+  footer.tsx
+  channel-card.tsx
+  section.tsx
+  filters.tsx
+/content
+  /projects/example-sais.mdx
+  /projects/example-cleantech.mdx
+  /posts/example.mdx
+/lib
+  contentlayer.ts
+  seo.ts
+  utils.ts
+/public
+  /portfolio/example.jpg
+  /icons/*
+  cv.pdf
+
+
+Portfolio example MDX (put two examples in):
+
+---
+title: "SA Innovation Summit — Ecosystem Platform"
+slug: "sais-ecosystem-platform"
+summary: "Scaled a multi-stakeholder platform; increased partner engagement and deal flow."
+role: "CEO / Ecosystem Lead"
+outcome: "Partner NPS +22; 200+ startups engaged; multi-year sponsorship runway."
+date: "2024-09-01"
+tags: ["Innovation","Ecosystem","Partnerships"]
+thumbnail: "/portfolio/sais.jpg"
+---
+
+## Context
+Short context paragraph…
+
+## Role
+What I owned…
+
+## Actions
+- Bullet actions…
+
+## Results
+- Metric/result bullets…
+
+## Proof
+- Link(s) to media/press if available.
+
+
+Newsletter page:
+
+Header + paragraph, then an embed placeholder <div id="newsletter-embed" /> with a comment indicating where to paste Beehiiv/Substack script later.
+
+Button row: “Read archives” (external), “Support my work” (Buy Me a Coffee placeholder).
+
+CV Shortcut:
+
+Add route alias so /cv redirects to /cv.pdf.
+
+Accessibility & Theming:
+
+Respect prefers-reduced-motion.
+
+Tailwind focus-visible styles on all interactive elements.
+
+Keyboard navigable filters and cards.
+
+Provide a light theme toggle but default to dark.
+
+Non-goals for MVP:
+
+No auth, no database, no external CMS.
+
+No Stripe integration yet (future store will embed Gumroad/LemonSqueezy).
+
+Deliverables:
+
+Fully running Next.js app with the above pages/components.
+
+Two sample portfolio MDX entries wired to the grid + detail page.
+
+Deployed locally and ready for Vercel (include vercel.json if needed).
+
+README with setup instructions: pnpm i, pnpm dev, Contentlayer build steps, and environment variables (only Plausible site ID placeholder).
+
+Acceptance criteria:
+
+Lighthouse performance > 90 on desktop.
+
+Channel cards on Home animate on hover and navigate correctly.
+
+Portfolio filters work client-side (by tag).
+
+OG image endpoint returns an image for a portfolio detail page.
+
+Sitemap and robots exist; Plausible snippet is behind an env var.
