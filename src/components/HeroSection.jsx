@@ -142,15 +142,12 @@ const HeroSection = () => {
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-accent/20 rounded-full blur-xl" />
               
               {/* Main image */}
-              <div className="relative rounded-2xl overflow-hidden border-4 border-accent/20 bg-slate-700">
-                <div className="w-full h-96 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl font-bold text-cyan-400">BM</span>
-                    </div>
-                    <p className="text-cyan-400 font-medium">Professional Portrait</p>
-                  </div>
-                </div>
+              <div className="relative rounded-2xl overflow-hidden border-4 border-accent/20">
+                <img 
+                  src="/images/buntu-majaja-professional-portrait.png"
+                  alt="Buntu Majaja - Professional Portrait"
+                  className="w-full h-96 object-cover object-center"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
               </div>
             </div>
