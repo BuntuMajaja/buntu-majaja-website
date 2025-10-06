@@ -144,7 +144,7 @@ const HeroSection = () => {
               {/* Main image */}
               <div className="relative rounded-2xl overflow-hidden border-4 border-accent/20">
                 <img 
-                  src="/images/buntu-majaja-professional-portrait.png"
+                  src="/images/buntu-majaja-speaker-profile.webp"
                   alt="Buntu Majaja - Professional Portrait"
                   className="w-full h-96 object-cover object-center"
                 />
