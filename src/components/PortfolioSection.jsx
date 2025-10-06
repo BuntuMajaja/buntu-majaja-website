@@ -489,7 +489,30 @@ const PortfolioSection = () => {
     }
   ];
 
-  const allTags = ['All', ...new Set(projects.flatMap(project => project.tags))];
+  // MECE Secondary Categories (Maximum 20)
+  const allTags = [
+    'All',
+    'Innovation',
+    'Ecosystem', 
+    'Strategy',
+    'Investment',
+    'Technology',
+    'International',
+    'Policy',
+    'Education',
+    'Events',
+    'Acceleration',
+    'Advisory',
+    'Partnerships',
+    'Research',
+    'Media',
+    'Mining',
+    'Food',
+    'Analytics',
+    'Blockchain',
+    'CleanTech',
+    'Consulting'
+  ];
   const allMetaTags = ['All', ...new Set(projects.map(project => project.metaTag))];
 
   const filteredProjects = projects.filter(project => {
