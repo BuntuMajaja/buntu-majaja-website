@@ -1,4 +1,4 @@
-import { User, Briefcase, Mail } from 'lucide-react';
+import { User, Briefcase, Mail, Mic } from 'lucide-react';
 import ChannelCard from './ChannelCard';
 import Section from './Section';
 
@@ -21,6 +21,14 @@ const ChannelsSection = () => {
       }
     },
     {
+      title: 'Speaking',
+      description: 'Keynotes that challenge thinking and equip leaders. Explore speaking topics and book an engagement.',
+      icon: Mic,
+      onClick: () => {
+        document.querySelector('#speaking')?.scrollIntoView({ behavior: 'smooth' });
+      }
+    },
+    {
       title: 'Newsletter',
       description: 'FutureSight Africa — weekly notes on innovation & capital. Join 2,000+ subscribers exploring Africa\'s future.',
       icon: Mail,
@@ -37,11 +45,11 @@ const ChannelsSection = () => {
           Explore My <span className="gradient-text">Universe</span>
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Three channels that capture my work in building Africa's innovation ecosystem
+          Four channels that capture my work in building Africa's innovation ecosystem
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {channels.map((channel, index) => (
           <ChannelCard
             key={channel.title}

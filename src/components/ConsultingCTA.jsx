@@ -100,7 +100,7 @@ const ConsultingCTA = () => {
             >
               <a href="#speaking" className="inline-flex items-center">
                 <Mic className="mr-2 h-4 w-4" />
-                Book Speaking Engagement
+                Book Speaking
               </a>
             </Button>
           </motion.div>
