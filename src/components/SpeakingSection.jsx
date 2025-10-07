@@ -4,6 +4,7 @@ import { Cpu, Globe2, TrendingUp, Network, Download, Mail, Play, ChevronDown, Ch
 import { Button } from '@/components/ui/button';
 import Section from './Section';
 import TestimonialCarousel from './TestimonialCarousel';
+import PastEngagementsCarousel from './PastEngagementsCarousel';
 
 const SpeakingSection = () => {
   const [showPastEngagements, setShowPastEngagements] = useState(false);
@@ -39,23 +40,7 @@ const SpeakingSection = () => {
     }
   ];
 
-  const pastEngagements = [
-    {
-      event: 'SA Innovation Summit',
-      year: '2020-2024',
-      description: 'Annual keynote speaker at Africa\'s largest startup event'
-    },
-    {
-      event: 'TEDx',
-      year: '2019',
-      description: 'Exploring the intersection of innovation and African identity'
-    },
-    {
-      event: 'Innovation Week Tanzania',
-      year: '2023',
-      description: 'Keynote on building sustainable innovation ecosystems'
-    }
-  ];
+
 
   return (
     <Section id="speaking" background="gradient">
@@ -163,7 +148,7 @@ const SpeakingSection = () => {
         <TestimonialCarousel />
       </motion.div>
 
-      {/* Past Engagements - Expandable */}
+      {/* Past Engagements - Horizontal Carousel */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -171,7 +156,7 @@ const SpeakingSection = () => {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <div className="text-center">
+        <div className="text-center mb-8">
           <button
             onClick={() => setShowPastEngagements(!showPastEngagements)}
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-200 group"
@@ -194,21 +179,7 @@ const SpeakingSection = () => {
               transition={{ duration: 0.3 }}
               className="overflow-hidden"
             >
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-8">
-                {pastEngagements.map((engagement, index) => (
-                  <motion.div
-                    key={engagement.event}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="bg-card/50 border border-border rounded-xl p-5 text-center"
-                  >
-                    <h4 className="font-semibold text-foreground mb-2">{engagement.event}</h4>
-                    <p className="text-xs text-accent font-medium mb-2">{engagement.year}</p>
-                    <p className="text-xs text-muted-foreground">{engagement.description}</p>
-                  </motion.div>
-                ))}
-              </div>
+              <PastEngagementsCarousel />
             </motion.div>
           )}
         </AnimatePresence>

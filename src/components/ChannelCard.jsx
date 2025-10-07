@@ -5,12 +5,15 @@ const ChannelCard = ({ title, description, icon: Icon, onClick, delay = 0 }) => 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{ scale: 1.02, y: -4 }}
+      whileTap={{ scale: 0.98 }}
       transition={{ duration: 0.6, delay }}
+      viewport={{ once: true }}
       className="group cursor-pointer"
       onClick={onClick}
     >
-      <div className="relative overflow-hidden rounded-2xl bg-card border border-border hover-lift geometric-pattern p-8 h-full">
+      <div className="relative overflow-hidden rounded-2xl bg-card border border-border shadow-lg hover:shadow-xl transition-shadow duration-300 geometric-pattern p-8 h-full">
         {/* Icon */}
         <div className="mb-6">
           <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
