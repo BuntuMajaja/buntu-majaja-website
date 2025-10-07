@@ -1,10 +1,13 @@
-import { motion } from 'framer-motion';
-import { Cpu, Globe2, TrendingUp, Network, Download, Mail, Play } from 'lucide-react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Cpu, Globe2, TrendingUp, Network, Download, Mail, Play, ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Section from './Section';
 import TestimonialCarousel from './TestimonialCarousel';
 
 const SpeakingSection = () => {
+  const [showPastEngagements, setShowPastEngagements] = useState(false);
+
   const topics = [
     {
       title: 'The Convergence Crisis: AI, Robotics & Batteries',
@@ -65,7 +68,7 @@ const SpeakingSection = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            <span className="gradient-text">Speaking</span> Engagements
+            <span className="gradient-text">Speaking</span>
           </h2>
           <p className="text-lg text-foreground leading-relaxed max-w-3xl mx-auto mb-4">
             Buntu delivers keynotes that challenge conventional thinking and equip leaders with frameworks to navigate complexity. His presentations blend African insights with global macro trends, offering audiences actionable strategies for innovation, economic transformation, and systems-level change.
@@ -160,7 +163,7 @@ const SpeakingSection = () => {
         <TestimonialCarousel />
       </motion.div>
 
-      {/* Past Engagements */}
+      {/* Past Engagements - Expandable */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -168,23 +171,47 @@ const SpeakingSection = () => {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h3 className="text-xl font-semibold text-primary text-center mb-8">Past Speaking Engagements</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          {pastEngagements.map((engagement, index) => (
-            <motion.div
-              key={engagement.event}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-card/50 border border-border rounded-xl p-5 text-center"
-            >
-              <h4 className="font-semibold text-foreground mb-2">{engagement.event}</h4>
-              <p className="text-xs text-accent font-medium mb-2">{engagement.year}</p>
-              <p className="text-xs text-muted-foreground">{engagement.description}</p>
-            </motion.div>
-          ))}
+        <div className="text-center">
+          <button
+            onClick={() => setShowPastEngagements(!showPastEngagements)}
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-200 group"
+          >
+            <span className="font-medium">View Past Speaking Engagements</span>
+            {showPastEngagements ? (
+              <ChevronUp className="w-4 h-4 group-hover:translate-y-[-2px] transition-transform" />
+            ) : (
+              <ChevronDown className="w-4 h-4 group-hover:translate-y-[2px] transition-transform" />
+            )}
+          </button>
         </div>
+
+        <AnimatePresence>
+          {showPastEngagements && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-8">
+                {pastEngagements.map((engagement, index) => (
+                  <motion.div
+                    key={engagement.event}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    className="bg-card/50 border border-border rounded-xl p-5 text-center"
+                  >
+                    <h4 className="font-semibold text-foreground mb-2">{engagement.event}</h4>
+                    <p className="text-xs text-accent font-medium mb-2">{engagement.year}</p>
+                    <p className="text-xs text-muted-foreground">{engagement.description}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.div>
 
       {/* Speaking Fees & CTA */}
@@ -196,7 +223,7 @@ const SpeakingSection = () => {
         className="text-center"
       >
         <p className="text-sm text-muted-foreground mb-6">
-          Speaking fees start at $1,550 (excl. taxes and hard costs)
+          Fees from $1,550 (plus taxes and hard costs)
         </p>
         
         <div className="space-y-4">
@@ -226,7 +253,7 @@ const SpeakingSection = () => {
                 className="inline-flex items-center"
               >
                 <Mail className="mr-2 h-4 w-4" />
-                Book Me to Speak
+                Book Speaking
               </a>
             </Button>
           </div>
