@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MessageSquare, Calendar, CheckCircle } from 'lucide-react';
+import { MessageSquare, Calendar, CheckCircle, Mic } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Section from './Section';
 
@@ -90,6 +90,18 @@ const ConsultingCTA = () => {
             >
               <Calendar className="mr-2 h-4 w-4" />
               Schedule Call
+            </Button>
+
+            <Button 
+              size="lg"
+              variant="default"
+              asChild
+              className="bg-accent hover:bg-accent/90 text-accent-foreground"
+            >
+              <a href="#speaking" className="inline-flex items-center">
+                <Mic className="mr-2 h-4 w-4" />
+                Book Speaking Engagement
+              </a>
             </Button>
           </motion.div>
 
