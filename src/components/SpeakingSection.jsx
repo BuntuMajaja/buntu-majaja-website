@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Mic, Users, Globe, Download, Mail, Phone, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Section from './Section';
+import TestimonialCarousel from './TestimonialCarousel';
 
 const SpeakingSection = () => {
   const topics = [
@@ -55,7 +56,7 @@ const SpeakingSection = () => {
   ];
 
   return (
-    <Section id="speaking" background="gradient" className="hidden">
+    <Section id="speaking" background="gradient">
       <div className="text-center mb-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -200,6 +201,20 @@ const SpeakingSection = () => {
             *All packages include publishable key-take outs, case studies, pitch deck and permission to record | *Excludes travel costs
           </p>
         </div>
+      </motion.div>
+
+      {/* Testimonials */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="mb-16"
+      >
+        <h3 className="text-2xl font-bold text-center mb-8">
+          What <span className="gradient-text">Clients Say</span>
+        </h3>
+        <TestimonialCarousel />
       </motion.div>
 
       {/* Previous Clients */}
