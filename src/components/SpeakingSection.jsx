@@ -9,28 +9,28 @@ const SpeakingSection = () => {
     {
       title: 'The Convergence Crisis: AI, Robotics & Batteries',
       hook: 'Technology Optimist: "We\'re building tomorrow with yesterday\'s playbook"',
-      description: 'Buntu explores the unprecedented convergence of AI, robotics, and battery technologies reshaping every industry. He provides frameworks for leaders to navigate this transformation and harness convergence for competitive advantage rather than disruption.',
+      description: 'Your competitors are already leveraging AI, robotics, and battery breakthroughs—but most organizations struggle to connect the dots between these converging technologies. Buntu explores the unprecedented convergence reshaping every industry and provides frameworks for leaders to navigate this transformation and harness convergence for competitive advantage rather than disruption.',
       audience: 'Tech executives, corporate strategists, innovation teams, venture capitalists',
       icon: Cpu
     },
     {
       title: 'Economic Sovereignty: How Money, Land & Ideas Really Work',
       hook: 'African Economic Thesis: "Money flows through colonial pipelines - here\'s how Africa breaks free"',
-      description: 'A macro examination of how money flows through colonial structures, aggregating wealth in London, New York, and Paris. Buntu unpacks why Africa must master resource extraction and idea generation to achieve true economic sovereignty and break free from dependency cycles.',
+      description: 'African economies remain trapped in dependency cycles despite decades of independence—wealth still aggregates in London, New York, and Paris. Buntu delivers a macro examination of how money flows through colonial structures and unpacks why Africa must master resource extraction and idea generation to achieve true economic sovereignty and break free from these persistent patterns.',
       audience: 'Development agencies, African leaders, economic forums, policy makers',
       icon: Globe2
     },
     {
       title: '2026 Foresight: Tech & Innovation Predictions',
       hook: 'Annual Predictions: "What every leader needs to know about next year"',
-      description: 'Buntu shares his data-informed predictions for technology, innovation, and macro trends that will define 2026. Using African and global insights, he examines opportunities and challenges that leaders need to prepare for in the year ahead.',
+      description: 'Strategic planning fails when leaders miss the early signals of technological and market shifts that reshape entire industries overnight. Buntu shares his data-informed predictions for technology, innovation, and macro trends that will define 2026. Using African and global insights, he examines opportunities and challenges that leaders need to prepare for in the year ahead.',
       audience: 'Corporate leaders, investors, innovation managers, conference audiences',
       icon: TrendingUp
     },
     {
       title: 'Innovation Ecosystems: The Complexity That Impacts Everything',
       hook: 'Systems Thinking: "Why most moonshots crash before takeoff"',
-      description: 'Most innovation initiatives fail because leaders underestimate ecosystem complexity and default to linear thinking. Buntu inspires teams to embrace systems thinking, pursue moonshot goals, and build exponential innovation ecosystems that drive transformational outcomes.',
+      description: 'Innovation budgets get wasted on initiatives that fail because leaders underestimate ecosystem complexity and default to linear thinking. Buntu inspires teams to embrace systems thinking, pursue moonshot goals, and build exponential innovation ecosystems that drive transformational outcomes rather than incremental improvements.',
       audience: 'Innovation teams, government officials, development agencies, corporate executives',
       icon: Network
     }
@@ -98,7 +98,7 @@ const SpeakingSection = () => {
         </div>
       </motion.div>
 
-      {/* Speaking Topics */}
+      {/* Speaking Topics - Single Column */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -109,7 +109,7 @@ const SpeakingSection = () => {
         <h3 className="text-2xl font-bold text-center mb-12">
           Speaking <span className="gradient-text">Topics</span>
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="max-w-4xl mx-auto space-y-6">
           {topics.map((topic, index) => {
             const Icon = topic.icon;
             return (
@@ -137,7 +137,7 @@ const SpeakingSection = () => {
                 
                 <div className="pt-4 border-t border-border">
                   <p className="text-xs text-muted-foreground">
-                    <span className="font-semibold text-primary">Ideal for:</span> {topic.audience}
+                    <span className="font-semibold text-primary">Typically speaks to:</span> {topic.audience}
                   </p>
                 </div>
               </motion.div>
