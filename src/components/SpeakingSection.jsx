@@ -161,7 +161,7 @@ const SpeakingSection = () => {
             onClick={() => setShowPastEngagements(!showPastEngagements)}
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-200 group"
           >
-            <span className="font-medium">View Past Speaking Engagements</span>
+            <span className="font-medium">Past Speaking</span>
             {showPastEngagements ? (
               <ChevronUp className="w-4 h-4 group-hover:translate-y-[-2px] transition-transform" />
             ) : (

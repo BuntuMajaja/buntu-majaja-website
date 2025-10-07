@@ -115,20 +115,23 @@ const PastEngagementsCarousel = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
             >
-              <div className="bg-black/80 border border-gray-800 rounded-xl p-5 h-full hover:border-primary/50 transition-colors">
-                {/* Icon */}
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <Building2 className="w-5 h-5 text-primary" />
-                </div>
+              <div className="bg-black/80 border border-gray-800 rounded-xl p-4 h-full hover:border-primary/50 transition-colors">
+                {/* Icon and Content on same line */}
+                <div className="flex items-start gap-3">
+                  {/* Icon */}
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Building2 className="w-5 h-5 text-primary" />
+                  </div>
 
-                {/* Content */}
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-white text-sm leading-tight line-clamp-2">
-                    {engagement.title}
-                  </h4>
-                  <p className="text-xs text-gray-400">
-                    {engagement.organization} • {engagement.location}
-                  </p>
+                  {/* Content */}
+                  <div className="flex-1 min-w-0 space-y-1.5">
+                    <h4 className="font-semibold text-white text-sm leading-tight line-clamp-2">
+                      {engagement.title}
+                    </h4>
+                    <p className="text-xs text-gray-400 leading-snug">
+                      {engagement.organization} • {engagement.location}
+                    </p>
+                  </div>
                 </div>
               </div>
             </motion.div>
