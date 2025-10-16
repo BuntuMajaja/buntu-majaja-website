@@ -15,7 +15,6 @@ const PortfolioSection = () => {
       metaTag: 'Ongoing / Active',
       oneLiner: 'Leading international executive education program focused on Real-Time Information Management Systems. Coordinating stakeholder engagements, site visits, and comprehensive learning reports for technology transfer.',
       tags: ['Innovation', 'Technology', 'International', 'Learning'],
-      image: '/images/rtims-study-tour.png',
       details: {
         context: 'Real-Time Information Management Systems (RTIMS) international study tour focusing on executive education and technology transfer for stakeholder organizations.',
         actions: [
@@ -45,7 +44,6 @@ const PortfolioSection = () => {
       metaTag: 'Advisory / Board',
       oneLiner: 'Strategic advisory role on national innovation infrastructure development and policy formulation. Contributing to evidence-based frameworks for science parks and innovation ecosystem growth across South Africa.',
       tags: ['Innovation', 'Policy', 'Science Parks'],
-      image: '/images/naci-science-parks.png',
       details: {
         context: 'Strategic advisory role on the National Advisory Council on Innovation, specifically focusing on science parks subcommittee to guide national innovation infrastructure development.',
         actions: [
@@ -75,7 +73,6 @@ const PortfolioSection = () => {
       metaTag: 'Advisory / Board',
       oneLiner: 'Strategic advisory role developing Johannesburg\'s culinary innovation ecosystem and supporting food entrepreneurs. Balancing cultural preservation with business innovation to strengthen the city\'s position as a culinary destination.',
       tags: ['Food', 'Culture', 'Ecosystem'],
-      image: '/images/joburg-culinary-board.png',
       details: {
         context: 'Advisory board role focused on developing Johannesburg\'s culinary innovation ecosystem, supporting food entrepreneurs and cultural preservation through business development.',
         actions: [
@@ -105,7 +102,6 @@ const PortfolioSection = () => {
       metaTag: 'Advisory / Board',
       oneLiner: 'Member of global Startup20 Taskforce representing African startup ecosystem interests in international policy forums. Contributing to G20 innovation policy recommendations and building consensus on startup-friendly frameworks.',
       tags: ['Startups', 'Policy', 'International'],
-      image: '/images/startup20-taskforce.png',
       details: {
         context: 'Member of the Startup20 Taskforce, contributing to global innovation policy dialogue and representing African startup ecosystem interests in international forums.',
         actions: [
@@ -135,7 +131,6 @@ const PortfolioSection = () => {
       metaTag: 'Advisory / Board',
       oneLiner: 'Strategic advisory role with advertising analytics company focusing on data-driven business strategy and product development. Contributing to market expansion strategies and translating complex analytics into actionable business insights.',
       tags: ['Marketing', 'Analytics', 'Data'],
-      image: '/images/advertising-analytics-board.png',
       details: {
         context: 'Advisory board role with advertising analytics company, providing strategic guidance on product development, market positioning, and business strategy in the data-driven marketing sector.',
         actions: [
@@ -165,7 +160,6 @@ const PortfolioSection = () => {
       metaTag: 'Ongoing / Active',
       oneLiner: 'Developing content ecosystem across multiple platforms (LinkedIn, Substack, YouTube) on innovation, AI, and African sovereignty. Building a coherent personal media brand while exploring how digital storytelling intersects with strategy and foresight.',
       tags: ['Media', 'Writing', 'AI', 'Innovation', 'Foresight', 'Philosophy'],
-      image: '/images/content-creation-platform.png',
       details: {
         context: 'Strategic development of comprehensive content ecosystem across multiple digital platforms to establish thought leadership in innovation, AI, and African economic sovereignty.',
         actions: [
@@ -195,7 +189,6 @@ const PortfolioSection = () => {
       metaTag: 'Ongoing / Active',
       oneLiner: 'Producing FutureSight Africa — a newsletter exploring the intersection of African innovation, foresight, and technology. Reinforced consistency in thought leadership and developed discipline in articulating foresight-driven insights weekly.',
       tags: ['Futures Thinking', 'Foresight', 'AI', 'Innovation', 'Writing'],
-      image: '/images/futuresight-africa.png',
       details: {
         context: 'Weekly newsletter publication exploring the intersection of African innovation, foresight thinking, and emerging technology trends with focus on strategic implications for the continent.',
         actions: [
@@ -225,7 +218,6 @@ const PortfolioSection = () => {
       metaTag: 'Ongoing / Active',
       oneLiner: 'Transformed Africa\'s largest startup event into a comprehensive ecosystem platform connecting startups, investors, and corporates. Scaled to cumulative 15,000+ attendees across 56 countries with $2M+ multi-year sponsorship runway and $22M+ in facilitated deals.',
       tags: ['Innovation', 'Ecosystem', 'Partnerships', 'Events'],
-      image: '/images/sa-innovation-summit.png',
       details: {
         context: 'Post-COVID transformation of Africa\'s largest startup event into a comprehensive ecosystem platform that connects startups, investors, and corporates across the continent.',
         actions: [
@@ -255,7 +247,6 @@ const PortfolioSection = () => {
       metaTag: 'Completed / Case Study',
       oneLiner: 'Directed comprehensive two-year bilateral innovation program strengthening ties between Swiss and South African ecosystems. Focused on blockchain and cleantech solutions with successful cross-border mentorship and market entry support.',
       tags: ['Innovation', 'CleanTech', 'Blockchain', 'International'],
-      image: '/images/sa-switzerland-innovation.png',
       details: {
         context: 'Bilateral innovation program designed to strengthen ties between Swiss and South African innovation ecosystems, focusing on blockchain and cleantech solutions with commercial and social impact potential.',
         actions: [
@@ -285,7 +276,6 @@ const PortfolioSection = () => {
       metaTag: 'Completed / Case Study',
       oneLiner: 'Co-created one of Africa\'s first virtual accelerator programs during the pandemic, supporting accessible startup development across the continent. Directly mentored 200+ founders through structured programs, with portfolio startups raising $10M+ in total funding.',
       tags: ['Acceleration', 'Startups', 'Mentorship', 'Virtual'],
-      image: '/images/techtribe-accelerator.png',
       details: {
         context: 'Co-created one of Africa\'s first virtual accelerator programs during the pandemic, addressing the critical need for accessible startup support across the continent when physical programs became impossible.',
         actions: [
@@ -315,7 +305,6 @@ const PortfolioSection = () => {
       metaTag: 'Completed / Case Study',
       oneLiner: 'Published analytical reviews of ARK Invest\'s annual "Big Ideas" reports, contextualising them for African markets. Learned how to critically assess frontier technologies through an African lens; improved analytical writing depth.',
       tags: ['Fintech', 'Research', 'Analysis', 'Technology', 'Innovation'],
-      image: '/images/ark-invest-review.png',
       details: {
         context: 'Analytical newsletter series providing critical reviews and African contextualization of ARK Invest\'s influential annual "Big Ideas" reports on disruptive innovation and technology trends.',
         actions: [
@@ -345,7 +334,6 @@ const PortfolioSection = () => {
       metaTag: 'Completed / Case Study',
       oneLiner: 'Hosted and produced podcast episodes exploring identity, creativity, and purpose through African and global perspectives. Learned audio storytelling and deepened skills in connecting personal narrative with broader cultural themes.',
       tags: ['Media', 'Storytelling', 'Philosophy', 'Personal Growth'],
-      image: '/images/ubuntu-dreams-podcast.png',
       details: {
         context: 'Podcast series exploring themes of identity, creativity, and purpose through conversations and storytelling that connected personal narratives with broader African and global cultural themes.',
         actions: [
@@ -375,7 +363,6 @@ const PortfolioSection = () => {
       metaTag: 'Completed / Case Study',
       oneLiner: 'Led podcast series under South Africa\'s Department of Basic Education exploring the E³ framework and innovation in education. Gained insights into public–private collaboration models and the complexity of educational reform in emerging contexts.',
       tags: ['Education', 'Entrepreneurship', 'Employability', 'Media'],
-      image: '/images/e3-podcast.png',
       details: {
         context: 'Podcast series developed under South Africa\'s Department of Basic Education exploring the E³ framework (Education, Entrepreneurship, Employability) and innovation approaches to educational reform.',
         actions: [
@@ -405,7 +392,6 @@ const PortfolioSection = () => {
       metaTag: 'Completed / Case Study',
       oneLiner: 'Strategic partnership with Africa\'s Business Heroes (Jack Ma Foundation initiative) to support and scale African entrepreneurs. Managed Southern Africa regional delivery, progressing from Project Manager to Director while facilitating mentorship and ecosystem connections.',
       tags: ['Partnerships', 'Startups', 'Investment', 'Ecosystem'],
-      image: '/images/africa-business-heroes.png',
       details: {
         context: 'Strategic partnership with Africa\'s Business Heroes (Jack Ma Foundation initiative) to support and scale African entrepreneurs through mentorship, funding, and ecosystem connections.',
         actions: [
@@ -435,7 +421,6 @@ const PortfolioSection = () => {
       metaTag: 'Completed / Case Study',
       oneLiner: 'Cross-continental investment platform bridging Japanese institutional capital with high-growth African startups. Successfully raised $100K seed funding and established operational presence in both Tokyo and Johannesburg with functional SaaS exchange platform.',
       tags: ['Investment', 'Platform', 'International', 'SaaS'],
-      image: '/images/andafrica-platform.png',
       details: {
         context: 'Cross-continental investment platform designed to bridge the gap between Japanese institutional capital and high-growth African startups, addressing the information asymmetry and cultural barriers in cross-border investment.',
         actions: [
@@ -465,7 +450,6 @@ const PortfolioSection = () => {
       metaTag: 'Completed / Case Study',
       oneLiner: 'Strategic consulting engagement with major mining company to develop and implement innovation frameworks driving operational efficiency. Successfully delivered measurable results unlocking 5x forecasted return through systematic innovation processes.',
       tags: ['Innovation', 'Strategy', 'Mining', 'Consulting'],
-      image: '/images/mining-innovation.png',
       details: {
         context: 'Strategic consulting engagement with major mining company to develop and implement innovation frameworks that would drive operational efficiency and competitive advantage in traditional mining operations.',
         actions: [
