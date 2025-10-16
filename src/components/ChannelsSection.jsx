@@ -45,7 +45,7 @@ const ChannelsSection = () => {
           Explore My <span className="gradient-text">Universe</span>
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Four channels that capture my work in building Africa's innovation ecosystem
+          Four channels that capture my work in innovation, partnerships, and venture ecosystems
         </p>
       </div>
 

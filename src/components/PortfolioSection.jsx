@@ -223,7 +223,7 @@ const PortfolioSection = () => {
       role: 'CEO / Ecosystem Lead',
       years: '2020 - Present',
       metaTag: 'Ongoing / Active',
-      oneLiner: 'Transformed Africa\'s largest startup event into a comprehensive ecosystem platform connecting startups, investors, and corporates. Scaled to 15,000+ attendees across 56 countries with $2M+ multi-year sponsorship runway and $22M+ in facilitated deals.',
+      oneLiner: 'Transformed Africa\'s largest startup event into a comprehensive ecosystem platform connecting startups, investors, and corporates. Scaled to cumulative 15,000+ attendees across 56 countries with $2M+ multi-year sponsorship runway and $22M+ in facilitated deals.',
       tags: ['Innovation', 'Ecosystem', 'Partnerships', 'Events'],
       image: '/images/sa-innovation-summit.png',
       details: {
@@ -283,7 +283,7 @@ const PortfolioSection = () => {
       role: 'Co-Founder / Program Director',
       years: '2020 - 2024',
       metaTag: 'Completed / Case Study',
-      oneLiner: 'Co-created one of Africa\'s first virtual accelerator programs during the pandemic, supporting accessible startup development across the continent. Directly mentored 200+ founders through structured programs, with portfolio startups raising $20M+ in total funding.',
+      oneLiner: 'Co-created one of Africa\'s first virtual accelerator programs during the pandemic, supporting accessible startup development across the continent. Directly mentored 200+ founders through structured programs, with portfolio startups raising $10M+ in total funding.',
       tags: ['Acceleration', 'Startups', 'Mentorship', 'Virtual'],
       image: '/images/techtribe-accelerator.png',
       details: {
