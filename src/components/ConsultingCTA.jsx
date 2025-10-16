@@ -46,21 +46,21 @@ const ConsultingCTA = () => {
             className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8"
           >
             <div className="space-y-2">
-              <h3 className="font-semibold text-foreground">Innovation Strategy</h3>
+              <h3 className="font-semibold text-foreground">Innovation Strategy & Venture Design</h3>
               <p className="text-sm text-muted-foreground">
-                Design systems that convert vision into scalable ventures
+                Work with founders and executives to design innovation models that translate vision into scalable returns with clear pathways to commercial success and market traction.
               </p>
             </div>
             <div className="space-y-2">
-              <h3 className="font-semibold text-foreground">Ecosystem Building</h3>
+              <h3 className="font-semibold text-foreground">Ecosystem & Partnership Development</h3>
               <p className="text-sm text-muted-foreground">
-                Create platforms that unlock innovation potential
+                Collaborate with public–private actors and industry leaders to build high-performing innovation ecosystems... aligning talent, capital, and institutions to drive shared growth and long-term ROI
               </p>
             </div>
             <div className="space-y-2">
-              <h3 className="font-semibold text-foreground">Economic Sovereignty</h3>
+              <h3 className="font-semibold text-foreground">Digital Transformation & Automation</h3>
               <p className="text-sm text-muted-foreground">
-                Develop technology solutions for African economic independence
+                Partner with enterprises and corporates to design and implement digital transformation strategies, leveraging AI, automation, and data systems.
               </p>
             </div>
           </motion.div>

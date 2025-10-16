@@ -56,10 +56,10 @@ const SpeakingSection = () => {
             <span className="gradient-text">Speaking</span>
           </h2>
           <p className="text-lg text-foreground leading-relaxed max-w-3xl mx-auto mb-4">
-            Buntu delivers keynotes that challenge conventional thinking and equip leaders with frameworks to navigate complexity. His presentations blend African insights with global macro trends, offering audiences actionable strategies for innovation, economic transformation, and systems-level change.
+            Buntu delivers keynotes that challenge conventional thinking and equip leaders with frameworks to navigate complexity. His presentations blend frontier Technology insights with global macro trends from a Global South perspective, offering audiences actionable strategies for innovation, economic transformation, and systems-level change.
           </p>
           <p className="text-base text-muted-foreground max-w-3xl mx-auto">
-            Ideal for conferences, corporate events, innovation summits, and leadership forums seeking thought-provoking content that inspires action and reframes how audiences think about technology, economics, and the future.
+            Ideal for conferences, corporate events, innovation summits, and leadership forums seeking thought-provoking content that inspires action and reframes how audiences think about technology, socio-economics, and the future.
           </p>
         </motion.div>
       </div>

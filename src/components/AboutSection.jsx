@@ -72,12 +72,10 @@ const AboutSection = () => {
           >
             <h3 className="text-xl font-semibold text-primary">Philosophy</h3>
             <blockquote className="border-l-4 border-accent pl-6 italic text-muted-foreground">
-              "Go where you are celebrated, not where you are tolerated"
+              "Love • Growth • Authenticity • Abundance • Sovereignty"
             </blockquote>
             <p className="text-muted-foreground leading-relaxed">
-              My values are rooted in Growth, Positivity, Integrity, Gratitude, and Freedom. I consider myself 
-              a warrior against unjust inequality, dreaming to touch millions of African entrepreneurs and 
-              living through innovation and investing in innovative solutions.
+              I believe in creating abundance through innovation and integrity. My values—Growth, Gratitude, Freedom, and Purpose—guide a lifelong mission to unlock human potential. I stand against unjust inequality, dedicating my work to enabling millions of entrepreneurs to build prosperous, resilient futures across the Global South.
             </p>
           </motion.div>
 

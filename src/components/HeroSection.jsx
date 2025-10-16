@@ -43,7 +43,7 @@ const HeroSection = () => {
                 <span className="gradient-text">Buntu Majaja</span>
               </h1>
               <h2 className="text-xl md:text-2xl text-muted-foreground font-medium">
-                Ecosystem Builder • Strategist • Investor
+                Innovation & Partnerships Lead | Venture Development Strategist | AI Commercialisation Architect, Global South Markets
               </h2>
             </motion.div>
 
@@ -64,7 +64,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.8 }}
               className="border-l-4 border-accent pl-6 italic text-muted-foreground"
             >
-              "Go where you are celebrated, not where you are tolerated"
+              "It does not take time, it takes alignment" (Oct'25)
             </motion.blockquote>
 
             {/* CTA Buttons */}
