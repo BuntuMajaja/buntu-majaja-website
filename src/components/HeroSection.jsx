@@ -42,9 +42,17 @@ const HeroSection = () => {
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                 <span className="gradient-text">Buntu Majaja</span>
               </h1>
-              <h2 className="text-xl md:text-2xl text-muted-foreground font-medium">
-                Innovation & Partnerships Lead | Venture Development Strategist | AI Commercialisation Architect, Global South Markets
-              </h2>
+              <div className="space-y-1">
+                <p className="text-base md:text-lg text-muted-foreground font-medium">
+                  Innovation & Partnerships Lead
+                </p>
+                <p className="text-base md:text-lg text-muted-foreground font-medium">
+                  Venture Development Strategist
+                </p>
+                <p className="text-base md:text-lg text-muted-foreground font-medium">
+                  AI Commercialisation Architect, Global South Markets
+                </p>
+              </div>
             </motion.div>
 
             {/* Subtitle */}
