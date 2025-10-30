@@ -10,11 +10,12 @@ const PortfolioSection = () => {
     {
       id: 1,
       title: 'RTIMS International Study Tour',
+      image: '/images/portfolio-rtims.jpg',
       role: 'Project Director',
       years: '2025 - Present',
       metaTag: 'Ongoing / Active',
-      oneLiner: 'Leading international executive education program focused on Real-Time Information Management Systems. Coordinating stakeholder engagements, site visits, and comprehensive learning reports for technology transfer.',
-      tags: ['Innovation', 'Technology', 'International', 'Learning'],
+      oneLiner: 'Leading international executive education program focused on Real-Time Information Management Systems in Mining Modernisation. Coordinating stakeholder engagements and building commercialisation strategies and business cases based on technology stacks learned from the project.',
+      tags: ['Innovation', 'Technology', 'International', 'Mining'],
       details: {
         context: 'Real-Time Information Management Systems (RTIMS) international study tour focusing on executive education and technology transfer for stakeholder organizations.',
         actions: [
@@ -39,6 +40,7 @@ const PortfolioSection = () => {
     {
       id: 2,
       title: 'National Advisory Council on Innovation — Science Parks',
+      image: '/images/portfolio-naci.jpg',
       role: 'Subcommittee Member',
       years: '2025 - Present',
       metaTag: 'Advisory / Board',
@@ -68,6 +70,7 @@ const PortfolioSection = () => {
     {
       id: 3,
       title: 'Johannesburg Culinary Advisory Board',
+      image: '/images/portfolio-culinary.jpg',
       role: 'Advisory Board Member',
       years: '2023 - 2025',
       metaTag: 'Advisory / Board',
@@ -97,6 +100,7 @@ const PortfolioSection = () => {
     {
       id: 4,
       title: 'Startup20 Taskforce',
+      image: '/images/portfolio-startup20.jpg',
       role: 'Member',
       years: '2025',
       metaTag: 'Advisory / Board',
@@ -126,6 +130,7 @@ const PortfolioSection = () => {
     {
       id: 5,
       title: 'Advertising Analytics Advisory Board',
+      image: '/images/portfolio-analytics.jpg',
       role: 'Advisory Board Member',
       years: '2023 - Present',
       metaTag: 'Advisory / Board',
@@ -155,6 +160,7 @@ const PortfolioSection = () => {
     {
       id: 6,
       title: 'Content Creation & Thought Leadership Platform',
+      image: '/images/portfolio-content.jpg',
       role: 'Content Creator / Strategist',
       years: '2024 - Present',
       metaTag: 'Ongoing / Active',
@@ -183,6 +189,7 @@ const PortfolioSection = () => {
     },
     {
       id: 7,
+      image: '/images/portfolio-newsletter.jpg',
       title: 'FutureSight Africa Newsletter',
       role: 'Author / Curator',
       years: '2023 - Present',
@@ -212,6 +219,7 @@ const PortfolioSection = () => {
     },
     {
       id: 8,
+      image: '/images/portfolio-summit.jpg',
       title: 'SA Innovation Summit — Ecosystem Platform',
       role: 'CEO / Ecosystem Lead',
       years: '2020 - Present',
@@ -240,7 +248,8 @@ const PortfolioSection = () => {
       }
     },
     {
-      id: 7,
+      id: 9,
+      image: '/images/portfolio-blockchain.jpg',
       title: 'SA–Switzerland Blockchain & CleanTech Innovation Challenges',
       role: 'Project Director',
       years: '2022 - 2024',
@@ -269,7 +278,8 @@ const PortfolioSection = () => {
       }
     },
     {
-      id: 8,
+      id: 10,
+      image: '/images/portfolio-techtribe.jpg',
       title: 'TechTribe Accelerator — Virtual Program',
       role: 'Co-Founder / Program Director',
       years: '2020 - 2024',
@@ -298,7 +308,8 @@ const PortfolioSection = () => {
       }
     },
     {
-      id: 9,
+      id: 11,
+      image: '/images/portfolio-ark.jpg',
       title: 'ARK Invest Big Ideas Review Newsletter',
       role: 'Author / Analyst',
       years: '2021 - 2022',
@@ -327,7 +338,8 @@ const PortfolioSection = () => {
       }
     },
     {
-      id: 10,
+      id: 12,
+      image: '/images/portfolio-podcast-ubuntu.jpg',
       title: 'Ubuntu Dreams Podcast',
       role: 'Host / Producer',
       years: '2020 - 2021',
@@ -356,7 +368,8 @@ const PortfolioSection = () => {
       }
     },
     {
-      id: 11,
+      id: 13,
+      image: '/images/portfolio-podcast-e3.jpg',
       title: 'E³ Podcast – Education, Entrepreneurship & Employability (Department of Education)',
       role: 'Host / Facilitator',
       years: '2019 - 2020',
@@ -385,7 +398,8 @@ const PortfolioSection = () => {
       }
     },
     {
-      id: 12,
+      id: 14,
+      image: '/images/portfolio-abh.jpg',
       title: 'Africa\'s Business Heroes — Southern Africa Anchor Partnership',
       role: 'Project Manager → Project Director',
       years: '2021 - 2023',
@@ -414,7 +428,8 @@ const PortfolioSection = () => {
       }
     },
     {
-      id: 13,
+      id: 15,
+      image: '/images/portfolio-andafrica.jpg',
       title: 'AndAfrica Investment Platform',
       role: 'Executive / Platform Builder',
       years: '2018 - 2019',
@@ -443,7 +458,8 @@ const PortfolioSection = () => {
       }
     },
     {
-      id: 14,
+      id: 16,
+      image: '/images/portfolio-cleantech.jpg',
       title: 'Mining Innovation Project',
       role: 'Senior Strategy & Innovation Consultant',
       years: '2017',
@@ -653,7 +669,18 @@ const PortfolioSection = () => {
               key={project.id}
               className="bg-gray-800 rounded-xl overflow-hidden hover:bg-gray-750 transition-all duration-300 group"
             >
-<div className="p-6">
+              {/* Project Image */}
+              {project.image && (
+                <div className="aspect-video w-full overflow-hidden bg-gray-800/50">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              )}
+              
+              <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-3">
                     <Calendar className="w-4 h-4 text-gray-400" />
