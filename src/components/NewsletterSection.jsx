@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { Mail, ExternalLink, Coffee, Users, TrendingUp, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import Section from './Section';
 
 const NewsletterSection = () => {
@@ -89,34 +88,23 @@ const NewsletterSection = () => {
           >
             <h3 className="text-xl font-semibold text-foreground">Subscribe for Weekly Insights</h3>
             
-            {/* Placeholder for newsletter embed */}
-            <div 
-              id="newsletter-embed" 
+            {/* Substack subscribe embed */}
+            <div
+              id="newsletter-embed"
               className="p-6 bg-muted/20 border border-border rounded-xl"
             >
-              {/* This is where Beehiiv/Substack embed will go */}
-              <div className="space-y-4">
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Input 
-                    type="email" 
-                    placeholder="Enter your email address"
-                    className="flex-1"
-                  />
-                  <Button className="bg-primary hover:bg-primary/90">
-                    Subscribe
-                  </Button>
-                </div>
-                <p className="text-xs text-muted-foreground">
-                  Join 2,000+ subscribers. No spam, unsubscribe anytime.
-                </p>
-              </div>
-              
-              {/* Note for implementation */}
-              <div className="mt-4 p-3 bg-accent/10 border border-accent/20 rounded-lg">
-                <p className="text-xs text-accent">
-                  📝 Implementation Note: Replace this section with your Beehiiv or Substack embed code
-                </p>
-              </div>
+              <iframe
+                src="https://futuresightafrica.substack.com/embed"
+                width="100%"
+                height="320"
+                style={{ border: '1px solid #EEE', background: 'white', borderRadius: '0.5rem' }}
+                frameBorder="0"
+                scrolling="no"
+                title="Subscribe to FutureSight Africa"
+              />
+              <p className="text-xs text-muted-foreground mt-3 text-center">
+                Join 2,000+ subscribers. No spam, unsubscribe anytime.
+              </p>
             </div>
           </motion.div>
 

@@ -11,30 +11,30 @@ const PortfolioSection = () => {
       id: 1,
       title: 'RTIMS International Study Tour',
       image: '/images/portfolio-rtims.jpg',
-      role: 'Project Director',
+      role: 'Consultant',
       years: '2025 - Present',
       metaTag: 'Ongoing / Active',
-      oneLiner: 'Leading international executive education program focused on Real-Time Information Management Systems in Mining Modernisation. Coordinating stakeholder engagements and building commercialisation strategies and business cases based on technology stacks learned from the project.',
+      oneLiner: 'Consulting on an international executive education program focused on Real-Time Information Management Systems in Mining Modernisation. Supporting stakeholder engagements and helping build commercialisation strategies and business cases based on technology stacks learned from the project.',
       tags: ['Innovation', 'Technology', 'International', 'Mining'],
       details: {
         context: 'Real-Time Information Management Systems (RTIMS) international study tour focusing on executive education and technology transfer for stakeholder organizations.',
         actions: [
-          'Coordinating executive stakeholder focus groups',
-          'Managing international site visits and engagements',
-          'Developing comprehensive learning reports and documentation',
-          'Building business cases for technology implementation',
-          'Facilitating knowledge transfer between international partners'
+          'Supporting executive stakeholder focus groups',
+          'Contributing to international site visits and engagements',
+          'Helping develop comprehensive learning reports and documentation',
+          'Helping build business cases for technology implementation',
+          'Supporting knowledge transfer between international partners'
         ],
         results: [
-          'Successfully coordinating ongoing international study program',
+          'Supporting an ongoing international study program',
           'Engaging executive stakeholders in meaningful learning experiences',
-          'Developing actionable business cases and implementation frameworks',
-          'Building international technology transfer partnerships',
-          'Creating replicable study tour and learning methodologies'
+          'Helping develop actionable business cases and implementation frameworks',
+          'Contributing to international technology transfer partnerships',
+          'Helping create replicable study tour and learning methodologies'
         ],
         learning: 'Executive education programs require balancing high-level strategic insights with practical implementation guidance. Key insight: successful study tours must translate international best practices into locally relevant business cases.',
         leverage: 'Working with executive stakeholders, international technology partners, and learning institutions. Building relationships across government, private sector, and academic organizations.',
-        nextSteps: 'Program ongoing through 2025. Opportunities for collaboration in executive education, international study programs, and technology transfer initiatives. Open to partnerships with organizations interested in similar learning and development programs.'
+        nextSteps: 'Program ongoing, following an extension of the engagement. Opportunities for collaboration in executive education, international study programs, and technology transfer initiatives. Open to partnerships with organizations interested in similar learning and development programs.'
       }
     },
     {
