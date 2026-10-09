@@ -1,7 +1,7 @@
 /**
  * Masterclasses page.
  * DRAFT copy (2026-10-09): built from Buntu's own Capital 101 format and his keynote themes.
- * Deliberately names no client: client engagements (e.g. GIZ) may need written approval
+ * Deliberately names no client: client engagements may need written approval
  * before being referenced publicly. Buntu to confirm formats, durations and wording.
  */
 

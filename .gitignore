@@ -5,6 +5,16 @@ dist/
 # Archived git histories of the pre-2026-10-09 per-folder repos
 .git-archive/
 
+# PRIVATE: never pushed. This repo's source is public on GitHub.
+# Ops notes, roadmap and decisions (backed up by OneDrive only)
+/root.md
+# Working copy documents
+/20251007-*
+# Old PDFs and README that show a phone number / outdated details
+/buntu-majaja-website_v0/README.md
+/buntu-majaja-website_v0/*.pdf
+/buntu-majaja-website_v1/public/docs/*.pdf
+
 # OS and Office temp files
 .DS_Store
 Thumbs.db
