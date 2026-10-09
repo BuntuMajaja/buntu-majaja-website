@@ -8,10 +8,10 @@ export const links = {
   twitter: 'https://twitter.com/buntumajaja',
   youtube: 'https://youtube.com/@buntumajaja',
   linktree: 'https://linktr.ee/buntumajaja',
-  cv: '/docs/CV_B_Majaja_v4_2.pdf',
-  // WEB-012: the May 2023 profile carries old fees, an old Gmail and a phone number.
-  // Do not deploy until Buntu decides to keep, replace or hide it.
-  speakerProfile: '/docs/20230530-BuntuMajajaSpeakerProfilevv1.2.pdf',
+  // WEB-019: no public CV until an updated one without phone number exists.
+  // WEB-012: interim one-page profile (2026-10-09) built from site content, replacing the
+  // May 2023 PDF (old fees, old Gmail, phone number). Swap in the final profile when ready.
+  speakerProfile: '/docs/Buntu-Majaja-Speaker-Profile-2026.pdf',
   // WEB-011: Tally enquiry form (draft 44Wa1b, publish before deploy). Opens in the same tab;
   // on submit Tally redirects to /?thanks=speaking, where ThankYouNotice confirms.
   speakingForm: 'https://tally.so/r/44Wa1b?source=site',

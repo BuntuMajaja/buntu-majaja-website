@@ -43,7 +43,7 @@ export default function About() {
           <p className="mt-4 text-[18px] leading-relaxed text-ink/80">{about.philosophy}</p>
 
           <div className="mt-10 flex flex-wrap gap-3">
-            <Button href={links.cv} external>Download CV</Button>
+            <Button href={links.speakerProfile} external>Download profile</Button>
             <Button href={links.linkedin} variant="outline">Connect on LinkedIn</Button>
           </div>
         </div>
