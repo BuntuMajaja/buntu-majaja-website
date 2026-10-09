@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+/*
+ * Buntu Majaja Inc. — website v2 tokens.
+ * Palette from Design System 1.0.0 ("The Modern Earth"), used sparingly:
+ * paper and ink carry the page; earth and teal are rare accents; photography carries the personality.
+ */
+@theme {
+  --color-paper: #FAFAF0;
+  --color-manila: #F5F5DC;
+  --color-ink: #1A1A1A;
+  --color-slate: #5E6B78;
+  --color-mist: #708090;
+  --color-earth: #8B4513;
+  --color-teal: #1F7A6E;
+  --color-teal-bright: #2DBDB0;
+  --color-line: rgba(26, 26, 26, 0.1);
+
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-paper text-ink font-sans;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  ::selection {
+    background: var(--color-teal);
+    color: var(--color-paper);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-teal);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* Page gutter: generous side margins (ma) that scale with the viewport. */
+  .gutter {
+    @apply mx-auto w-full max-w-[1320px] px-5 sm:px-8 lg:px-14;
+  }
+
+  /* Type scale */
+  .t-display {
+    font-weight: 500;
+    /* Scales with height too, so the whole hero fits on short laptop screens. */
+    font-size: clamp(3.25rem, min(9vw, 12svh), 8.5rem);
+    line-height: 0.92;
+    letter-spacing: -0.045em;
+  }
+  .t-h1 {
+    font-weight: 500;
+    font-size: clamp(2.5rem, 5.5vw, 4.75rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+  .t-h2 {
+    font-weight: 500;
+    font-size: clamp(1.75rem, 3.2vw, 2.75rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+  }
+  .t-h3 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+  }
+  .t-lede {
+    font-size: clamp(1.125rem, 1.6vw, 1.375rem);
+    line-height: 1.55;
+    color: var(--color-slate);
+    max-width: 38em;
+  }
+  .t-small {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--color-slate);
+  }
+
+  /* The cut: a cropped corner notch — the site's one repeating brand device. */
+  .cut {
+    clip-path: polygon(0 0, calc(100% - var(--cut, 56px)) 0, 100% var(--cut, 56px), 100% 100%, 0 100%);
+  }
+  .cut-bl {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, var(--cut, 56px) 100%, 0 calc(100% - var(--cut, 56px)));
+  }
+
+  /* Glass: frosted surface used by the nav and its menus. */
+  .glass {
+    background: rgba(250, 250, 240, 0.62);
+    backdrop-filter: blur(22px) saturate(1.5);
+    -webkit-backdrop-filter: blur(22px) saturate(1.5);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.6) inset,
+      0 12px 40px -12px rgba(26, 26, 26, 0.18);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
