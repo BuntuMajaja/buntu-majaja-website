@@ -1,0 +1,12 @@
+# Dependencies and build output (regenerate with npm install / npm run build)
+node_modules/
+dist/
+
+# Archived git histories of the pre-2026-10-09 per-folder repos
+.git-archive/
+
+# OS and Office temp files
+.DS_Store
+Thumbs.db
+~$*
+*.log
