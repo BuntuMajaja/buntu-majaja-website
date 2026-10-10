@@ -7,8 +7,10 @@ import ThankYouNotice from '@/components/ui/ThankYouNotice'
 import About from '@/pages/About'
 import Explore from '@/pages/Explore'
 import Home from '@/pages/Home'
+import BookBuntu from '@/pages/BookBuntu'
 import Masterclasses from '@/pages/Masterclasses'
 import NotFound from '@/pages/NotFound'
+import Privacy from '@/pages/Privacy'
 import Speaker from '@/pages/Speaker'
 
 /** Routes. Keep in sync with `nav` in src/content/site.js and scripts/postbuild.js. */
@@ -43,6 +45,8 @@ export default function App() {
             <Route path="/speaker" element={<Speaker />} />
             <Route path="/masterclasses" element={<Masterclasses />} />
             <Route path="/explore" element={<Explore />} />
+            <Route path="/book-buntu" element={<BookBuntu />} />
+            <Route path="/privacy" element={<Privacy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           {!isHome && <Footer />}

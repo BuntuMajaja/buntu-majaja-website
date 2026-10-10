@@ -93,7 +93,7 @@ export default function Speaker() {
             Conferences, corporate events, summits and leadership forums. {speaking.fees}.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
-            <Button href={links.speakingForm} external={false} variant="light">Check speaker availability</Button>
+            <Button to={links.bookingPage} variant="light">Check speaker availability</Button>
             <Button href={links.speakerProfile} external variant="ghostLight">Download speaker profile</Button>
           </div>
         </div>

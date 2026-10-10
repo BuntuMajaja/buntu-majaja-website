@@ -3,7 +3,7 @@
 // for any unknown path. Keep this list in sync with src/content/site.js `routes`.
 import { copyFileSync, mkdirSync } from 'node:fs'
 
-const routes = ['about', 'speaker', 'masterclasses', 'explore']
+const routes = ['about', 'speaker', 'masterclasses', 'explore', 'book-buntu', 'privacy']
 
 for (const route of routes) {
   mkdirSync(`dist/${route}`, { recursive: true })

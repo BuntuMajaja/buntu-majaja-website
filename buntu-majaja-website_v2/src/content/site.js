@@ -12,11 +12,14 @@ export const links = {
   // WEB-012: interim one-page profile (2026-10-09) built from site content, replacing the
   // May 2023 PDF (old fees, old Gmail, phone number). Swap in the final profile when ready.
   speakerProfile: '/docs/Buntu-Majaja-Speaker-Profile-2026.pdf',
-  // WEB-011: Tally enquiry form (draft 44Wa1b, publish before deploy). Opens in the same tab;
-  // on submit Tally redirects to /?thanks=speaking, where ThankYouNotice confirms.
+  // All booking CTAs go to the on-site booking page, which embeds the Tally form (44Wa1b).
+  bookingPage: '/book-buntu',
   speakingForm: 'https://tally.so/r/44Wa1b?source=site',
-  // Old Gmail kept until Buntu confirms the public address (see Website/root.md).
-  masterclassEmail: 'mailto:buntumajaja@gmail.com?subject=Masterclass%20enquiry',
+  tallyEmbed: 'https://tally.so/embed/44Wa1b?hideTitle=1&transparentBackground=1&dynamicHeight=1&source=site',
+  email: 'hello@buntumajaja.com',
+  masterclassEmail: 'mailto:hello@buntumajaja.com?subject=Masterclass%20enquiry',
+  partnershipEmail: 'mailto:hello@buntumajaja.com?subject=Partnership%20request',
+  privacy: '/privacy',
 }
 
 /** Kit (ConvertKit) newsletter form. Display rules (timer, frequency) live in the Kit dashboard. */

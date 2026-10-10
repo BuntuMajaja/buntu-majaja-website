@@ -14,7 +14,7 @@ export const home = {
     {
       who: 'For event organisers',
       line: "Give your audience a new language for Africa's future... one they'll still be quoting at the next strategy offsite.",
-      cta: { label: 'Book a keynote', to: '/speaker' },
+      cta: { label: 'Book a keynote', to: '/book-buntu' },
     },
     {
       who: 'For leadership teams',

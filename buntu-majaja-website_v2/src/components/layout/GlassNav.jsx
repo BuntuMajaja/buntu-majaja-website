@@ -152,12 +152,12 @@ export default function GlassNav() {
         </div>
 
         <div className="flex items-center gap-2">
-          <a
-            href={links.speakingForm}
+          <Link
+            to={links.bookingPage}
             className="hidden min-h-11 items-center rounded-full bg-ink px-5 text-[15px] font-medium text-paper transition-colors hover:bg-earth sm:inline-flex"
           >
             Check availability
-          </a>
+          </Link>
           <button
             type="button"
             onClick={() => setMobileOpen(true)}
@@ -205,9 +205,9 @@ export default function GlassNav() {
                 <ExploreItem key={item.key} item={item} onNavigate={() => setMobileOpen(false)} />
               ))}
             </div>
-            <a href={links.speakingForm} className="mt-auto flex min-h-12 items-center justify-center rounded-full bg-ink text-paper">
+            <Link to={links.bookingPage} className="mt-auto flex min-h-12 items-center justify-center rounded-full bg-ink text-paper">
               Check speaker availability
-            </a>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

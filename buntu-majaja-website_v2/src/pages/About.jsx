@@ -70,7 +70,7 @@ export default function About() {
       </section>
 
       {/* Working together */}
-      <section className="gutter pt-28 sm:pt-40" aria-labelledby="advisory-title">
+      <section id="advisory" className="gutter scroll-mt-28 pt-28 sm:pt-40" aria-labelledby="advisory-title">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <h2 id="advisory-title" className="t-h2">Working with organisations</h2>

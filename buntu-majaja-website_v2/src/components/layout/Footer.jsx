@@ -47,11 +47,13 @@ export default function Footer() {
             <Link key={item.path} to={item.path} className="text-ink/70 hover:text-ink">{item.name}</Link>
           ))}
           <Link to="/explore" className="text-ink/70 hover:text-ink">Explore</Link>
+          <Link to="/book-buntu" className="text-ink/70 hover:text-ink">Book Buntu</Link>
+          <Link to="/privacy" className="text-ink/70 hover:text-ink">Privacy Policy</Link>
         </nav>
         <SocialLinks className="-ml-3 md:ml-0" />
       </div>
       <p className="t-small mt-6">
-        © {new Date().getFullYear()} {footer.copyrightHolder} Johannesburg. {footer.line}
+        © {new Date().getFullYear()} Majaja Corp (Pty) Ltd t/a {footer.copyrightHolder} Johannesburg. {footer.line}
       </p>
     </footer>
   )
