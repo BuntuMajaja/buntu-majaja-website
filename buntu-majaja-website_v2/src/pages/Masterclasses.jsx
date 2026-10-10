@@ -45,7 +45,7 @@ export default function Masterclasses() {
         <CutImage src={images.side.src} alt={images.side.alt} ratio="4 / 5" cut={64} corner="bl" className="lg:col-span-4" />
         <div className="lg:col-span-6 lg:col-start-6 lg:pb-10">
           <p className="t-h2">{masterclasses.closing}</p>
-          <Button href={links.masterclassEmail} className="mt-10">Enquire about a masterclass</Button>
+          <Button to={links.bookEnquiries} className="mt-10">Enquire about a masterclass</Button>
         </div>
       </section>
     </main>

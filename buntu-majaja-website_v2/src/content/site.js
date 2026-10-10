@@ -14,6 +14,8 @@ export const links = {
   speakerProfile: '/docs/Buntu-Majaja-Speaker-Profile-2026.pdf',
   // All booking CTAs go to the on-site booking page, which embeds the Tally form (44Wa1b).
   bookingPage: '/book-buntu',
+  // WEB-028: masterclass enquiries land on the Book page's email card (scrolls and focuses it).
+  bookEnquiries: '/book-buntu#enquiries',
   speakingForm: 'https://tally.so/r/44Wa1b?source=site',
   tallyEmbed: 'https://tally.so/embed/44Wa1b?hideTitle=1&transparentBackground=1&dynamicHeight=1&source=site',
   email: 'hello@buntumajaja.com',

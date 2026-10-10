@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { Mail } from 'lucide-react'
 import Button from '@/components/ui/Button'
 import CutImage from '@/components/ui/CutImage'
@@ -46,12 +46,54 @@ function useTallySubmitted() {
   return submitted
 }
 
+/**
+ * WEB-028: arriving at /book-buntu#enquiries puts the email card at the top (below the nav) and
+ * focuses its heading. The Tally iframe above resizes after load, so re-apply the scroll when it
+ * does, for up to 8 s, and stop as soon as the visitor scrolls, types, clicks or touches.
+ */
+function useScrollToEnquiries(headingRef, frameRef) {
+  const { hash } = useLocation()
+
+  useEffect(() => {
+    if (hash !== '#enquiries') return
+    const heading = headingRef.current
+    const section = heading?.closest('section')
+    if (!section) return
+
+    // The visitor has just arrived on this page, so jump (no animation): reliable on every
+    // browser and already reduced-motion friendly.
+    const align = () => section.scrollIntoView({ behavior: 'auto', block: 'start' })
+    align()
+    heading.focus({ preventScroll: true })
+
+    let active = true
+    const stop = () => {
+      active = false
+    }
+    const observer = new ResizeObserver(() => active && align())
+    if (frameRef.current) observer.observe(frameRef.current)
+    // Tally loads and resizes 1–5 s after arrival; hold the position until then or until the
+    // visitor takes over (scroll, touch, key, click).
+    const events = ['wheel', 'touchstart', 'keydown', 'mousedown']
+    events.forEach((e) => window.addEventListener(e, stop, { passive: true }))
+    const timer = setTimeout(stop, 8000)
+
+    return () => {
+      observer.disconnect()
+      clearTimeout(timer)
+      events.forEach((e) => window.removeEventListener(e, stop))
+    }
+  }, [hash, headingRef, frameRef])
+}
+
 export default function BookBuntu() {
   usePageMeta('Book Buntu', 'Check Buntu Majaja’s availability for keynotes, masterclasses and partnerships. We reply within 1–2 business days.')
   const frameRef = useRef(null)
   useTallyEmbeds(frameRef)
   const submitted = useTallySubmitted()
   const nextRef = useRef(null)
+  const enquiriesHeading = useRef(null)
+  useScrollToEnquiries(enquiriesHeading, frameRef)
 
   useEffect(() => {
     if (submitted) nextRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
@@ -86,17 +128,20 @@ export default function BookBuntu() {
         </div>
       </section>
 
-      <section className="gutter pt-6" aria-label="Other ways to work together">
+      <section id="enquiries" className="gutter scroll-mt-28 pt-6" aria-labelledby="enquiries-title">
         <div className="mx-auto grid max-w-2xl gap-6 sm:grid-cols-2">
           <div className="flex flex-col rounded-[28px] bg-ink p-8 text-paper">
             <div className="flex items-start justify-between gap-4">
-              <h2 className="text-[17px] font-semibold">{book.contact.heading}</h2>
+              <h2 id="enquiries-title" ref={enquiriesHeading} tabIndex={-1} className="text-[17px] font-semibold outline-none focus-visible:outline-2 focus-visible:outline-teal-bright">
+                {book.contact.heading}
+              </h2>
               <Mail className="h-5 w-5 shrink-0 text-paper/60" aria-hidden="true" />
             </div>
             <a href={`mailto:${links.email}`} className="mt-1 text-paper/80 underline-offset-4 hover:underline">{links.email}</a>
             <p className="mt-4 text-[15px] text-paper/60">{book.contact.line}</p>
+            <p className="mt-3 text-[15px] text-paper/60">{book.contact.include}</p>
             <div className="mt-auto flex flex-wrap gap-2 pt-8">
-              <Button to="/masterclasses" variant="light" className="min-h-10 px-4 text-sm">Masterclasses</Button>
+              <Button href={links.masterclassEmail} external={false} variant="light" className="min-h-10 px-4 text-sm">Email about a masterclass</Button>
               <Button href={links.partnershipEmail} external={false} variant="ghostLight" className="min-h-10 px-4 text-sm">Partnership request</Button>
             </div>
           </div>

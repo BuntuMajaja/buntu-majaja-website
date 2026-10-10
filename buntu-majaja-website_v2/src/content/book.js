@@ -8,6 +8,8 @@ export const book = {
   contact: {
     heading: 'Masterclasses and partnerships',
     line: 'Book a masterclass, discuss a partnership, or ask anything else.',
+    // DRAFT (WEB-028 step 4): Buntu to confirm.
+    include: 'For a masterclass, tell us your organisation, who will be in the room and what has to change, a date window, and whether it is in person or online.',
   },
   image: { src: '/media/speaker-stage-close.webp', alt: 'Buntu speaking on stage at the SA Innovation Summit' },
   submitted: 'Thank you. Your request is in. While you wait, here is where to go next.',
