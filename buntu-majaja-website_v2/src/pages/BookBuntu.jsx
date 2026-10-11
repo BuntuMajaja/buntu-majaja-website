@@ -113,13 +113,14 @@ export default function BookBuntu() {
         <div className="mx-auto max-w-2xl rounded-[28px] bg-white px-5 py-8 shadow-[0_24px_60px_-30px_rgba(26,26,26,0.25)] sm:px-10 sm:py-12">
           <h2 id="form-title" className="t-h3">{book.formHeading}</h2>
           <p className="mt-1 text-[15px] text-slate">{book.responseTime}</p>
+          {/* Tally adds its own side padding; on phones pull the form out to the card's edges so it isn't padded twice. */}
           <iframe
             ref={frameRef}
             data-tally-src={links.tallyEmbed}
             title="Check Buntu's availability"
             width="100%"
             height="1650"
-            className="mt-6 block w-full border-0"
+            className="-mx-5 mt-6 block w-[calc(100%+2.5rem)] max-w-none border-0 sm:mx-0 sm:w-full"
           />
           <p className="mt-4 text-sm text-slate">
             By sending this form you agree to our{' '}
